@@ -10,7 +10,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MySql.Data.MySqlClient;
 using System.Data;
 
 
@@ -22,7 +21,7 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
             // Create new GeoIPService
-            string ip = Request.ServerVariables["REMOTE_ADDR"];          
+            string ip = "78.153.43.57";          
             geoip.GeoIPService IPServ = new geoip.GeoIPService();
 
             // Use GetGeoIP method to check the IP
@@ -49,7 +48,7 @@ namespace WebApplication2
 
             }
         }
-
+        /*
         protected void btnSave_Click(object sender, EventArgs e)
         {
                 // Connection string for a typical local MySQL installation
@@ -75,7 +74,7 @@ namespace WebApplication2
                 GridView1.DataBind();
 
         }
-
+        */
         public String GetUser_IP()
         {
 

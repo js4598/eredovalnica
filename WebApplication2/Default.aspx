@@ -47,7 +47,7 @@
 		<hr id="hrex">
         <asp:TextBox ID="txtFirstName" placeholder="Ime predmeta" runat="server"></asp:TextBox>
         <asp:TextBox ID="txtLastName" placeholder="Stevilo dijakov" runat="server"></asp:TextBox>
-        <asp:Button ID="submit" class="submit" runat="server" Text="Save" onClick="btnSave_Click"/>
+        <asp:Button ID="submit" class="submit" runat="server" Text="Save"/>
     </div>
 
 			</div>
@@ -86,16 +86,39 @@
 				<section id="Predmeti">
 					<p>Moji predmeti:</p>
 						<hr id = "CrtaPredmeti"/>
-						
-				    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" Height="198px" Width="800px" AutoGenerateColumns="False">
-                        <Columns>
-                            <asp:BoundField DataField="imePredmeta" HeaderText="imePredmeta" SortExpression="imePredmeta" />
-                            <asp:BoundField DataField="steviloDijakov" HeaderText="steviloDijakov" SortExpression="steviloDijakov" />
-                            <asp:BoundField DataField="naslednjePredavanje" HeaderText="naslednjePredavanje" SortExpression="naslednjePredavanje" />
-                        </Columns>
-                    </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bazaeredovalnicaConnectionString %>" ProviderName="<%$ ConnectionStrings:bazaeredovalnicaConnectionString.ProviderName %>" SelectCommand="SELECT imePredmeta, steviloDijakov, naslednjePredavanje FROM predmeti"></asp:SqlDataSource>
-						
+						<div class="Matematika">
+							<div id="kid1">
+								<a href="file:///C:/Users/uporabnik/Downloads/faza2ŠtihecJan/izbraniPredmet.html"><p>Matematika</p></a>
+							</div>
+							<div id="kid2">
+							<p>Naslednje predavanje: 2.10. 12.00</p>
+							</div>
+							<div id="kid3">
+								<p>Št. štud.: 20</p>
+							</div>
+						</div>
+						<div class="Matematika1">
+							<div id="kid12">
+								<p>Geografija</p>
+							</div>
+							<div id="kid22">
+							<p>Naslednje predavanje: 3.10. 11.00</p>
+							</div>
+							<div id="kid32">
+								<p>Št. štud.: 15</p>
+							</div>
+						</div>
+						<div class="Matematika2">
+							<div id="kid13">
+								<p>Slovenščina</p>
+							</div>
+							<div id="kid23">
+							<p>Naslednje predavanje: 6.10. 14.00</p>
+							</div>
+							<div id="kid33">
+								<p>Št. štud.: 27</p>
+							</div>
+						</div>
 				</section>
 			
 			
@@ -116,7 +139,7 @@
                             <asp:UpdatePanel ID="pnlHelloWorld" runat="server">
                                 <ContentTemplate>
                                     <div id="Moznost1" class="Moznost1">
-                                        <asp:LinkButton runat="server" class="Moznost1" ID="btnHelloWorld" OnClick="btnHelloWorld_Click" Text="Naslednje predavanje" Font-Bold="True" Font-Size="20px" Font-Names="Tahoma" ForeColor="White" />
+                                        <asp:LinkButton runat="server" class="Moznost1" ID="btnHelloWorld" onClick="btnHelloWorld_Click" Text="Naslednje predavanje" Font-Bold="True" Font-Size="20px" Font-Names="Tahoma" ForeColor="White" />
                                     </div>
                                </ContentTemplate>
 
@@ -130,18 +153,7 @@
 				<section id="Predmeti1">
 					<p>Urnik:</p>
 						<hr id = "CrtaPredmeti1"/>
-					<asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Height="224px" Width="800px">
-                        <Columns>
-                            <asp:BoundField DataField="dan" HeaderText="dan" SortExpression="dan" />
-                            <asp:BoundField DataField="osmihDevetih" HeaderText="8:00" SortExpression="osmihDevetih" />
-                            <asp:BoundField DataField="devetihDesetih" HeaderText="9:00" SortExpression="devetihDesetih" />
-                            <asp:BoundField DataField="desetihEnajstih" HeaderText="10:00" SortExpression="desetihEnajstih" />
-                            <asp:BoundField DataField="enajstihDvanajstih" HeaderText="11:00" SortExpression="enajstihDvanajstih" />
-                            <asp:BoundField DataField="dvanajstihEnih" HeaderText="12:00" SortExpression="dvanajstihEnih" />
-                        </Columns>
-                    </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:bazaeredovalnicaConnectionString %>" ProviderName="<%$ ConnectionStrings:bazaeredovalnicaConnectionString.ProviderName %>" SelectCommand="Select dan, osmihDevetih, devetihDesetih, desetihEnajstih, enajstihDvanajstih, dvanajstihEnih from Urnik"></asp:SqlDataSource>
-					<!--	
+					
                     <table id="TimeTable">
 						
 								<tr>
@@ -195,9 +207,7 @@
 									<td>Geografija</td>
 							</tr>
 						</table>
-						
-				-->	
-						
+	
 				</section>
 				<section id="Moznosti1">
 					<div id="podMoznosti1">

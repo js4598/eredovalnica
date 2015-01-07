@@ -10,7 +10,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MySql.Data.MySqlClient;
 using System.Data;
 
 namespace WebApplication2
@@ -26,7 +25,7 @@ namespace WebApplication2
         {
             args.IsValid = (args.Value != "jani");
         }
-
+        /*
         protected void preusmeri(object sender, EventArgs e)
         {
             // Connection string for a typical local MySQL installation
@@ -55,10 +54,10 @@ namespace WebApplication2
                 Response.Redirect("http://localhost:63780/Default.aspx");
             
             }
-
+       
         }
 
-
+         */
 
 
 

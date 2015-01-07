@@ -73,7 +73,7 @@
 				  </select>
 				       
 					<div class="submit" class="fade">
-						<asp:button runat="server" type="submit" value="PRIJAVA" id="buttonBlue" name="submit" onClick="preusmeri"/>
+						<asp:button runat="server" type="submit" value="PRIJAVA" id="buttonBlue" name="submit"/>
 						<div class="ease"></div>
 					</div>
 				</form>
